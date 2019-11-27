@@ -12,20 +12,20 @@ mycursor = mydb.cursor()
 mycursor.execute("CREATE DATABASE IF NOT EXISTS mydatabase")
 mycursor.execute("USE mydatabase")
 mycursor.execute("CREATE TABLE IF NOT EXISTS data (nhiet_do VARCHAR(255), do_am VARCHAR(255))")
-# mycursor.execute("DELETE FROM data")
+mycursor.execute("DELETE FROM data")
 
 nhiet_do = []
 do_am = []
 
 print("Nhiet do: ")
-for i in range (0,10):
+for i in range (0,20):
 	nhiet_do.append(input())
 
 print("Nhap do am: ")
-for i in range(0,10):
+for i in range(0,20):
 	do_am.append(input())
 
-for row in range(0,10):
+for row in range(0,20):
 	sql = "INSERT INTO data (nhiet_do, do_am) VALUES (%s, %s)"
 	val = (nhiet_do[row], do_am[row])
 	mycursor.execute(sql, val)
