@@ -1,6 +1,5 @@
 import mysql.connector
 import matplotlib.pyplot as plt
-import numpy as np
 
 mydb = mysql.connector.connect(
   host="localhost",
